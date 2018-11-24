@@ -8,12 +8,11 @@ ${url}    http://www.alza.cz
 ${browser}    chrome
 
 *** Test Cases ***
-Test  
-    ${Template}=    Normalize Path    ${CURDIR}/../Resources/Templates/
-    ${TestOutput}=    Normalize Path    ${CURDIR}/../TestOutput/
-    ${TestData}=    Normalize Path    ${CURDIR}/../Resources/TestData/screenshot.png  
-    Capture Page Screenshot    ${TestData}    
-    Find Image    ${TestData}    ${Template}/Template_1.png    ${TestOutput}/img.png
+Find All Templates On Screenshot
+    [Template]    Find Template On Screenshot
+    Template_1.png
+    Template_2.png
+    Template_3.png  
 
 *** Keywords *** 
        

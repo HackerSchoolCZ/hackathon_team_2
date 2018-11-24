@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.7.0 on win32)" generated="20181124 17:43:35.825">
+<suite id="s1" name="Hackathon Team 2" source="D:\Dokumenty\Programovani\Projekty\Eclipse\hackathon_team_2">
+<suite id="s1-s1" name="Tests" source="D:\Dokumenty\Programovani\Projekty\Eclipse\hackathon_team_2\Tests">
+<suite id="s1-s1-s1" name="Template Matching" source="D:\Dokumenty\Programovani\Projekty\Eclipse\hackathon_team_2\Tests\template_matching.robot">
+<test id="s1-s1-s1-t1" name="Find All Templates On Screenshot">
+<kw name="Open Browser And Go To Page" library="template_matching_keywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20181124 17:43:36.168" level="INFO">Opening browser 'chrome' to base url 'http://www.alza.cz'.</msg>
+<status status="PASS" starttime="20181124 17:43:36.168" endtime="20181124 17:43:42.571"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20181124 17:43:42.572" endtime="20181124 17:43:43.689"></status>
+</kw>
+<status status="PASS" starttime="20181124 17:43:36.167" endtime="20181124 17:43:43.689"></status>
+</kw>
+<kw name="Find Template On Screenshot" library="template_matching_keywords">
+<arguments>
+<arg>Template_1.png</arg>
+</arguments>
+<kw name="Normalize Path" library="OperatingSystem">
+<doc>Normalizes the given path.</doc>
+<arguments>
+<arg>D:\\Dokumenty\\Programovani\\Projekty\\Eclipse\\hackathon_team_2\\Keywords/../Resources/Templates/</arg>
+</arguments>
+<assign>
+<var>${Template}</var>
+</assign>
+<msg timestamp="20181124 17:43:43.691" level="INFO">${Template} = D:\Dokumenty\Programovani\Projekty\Eclipse\hackathon_team_2\Resources\Templates</msg>
+<status status="PASS" starttime="20181124 17:43:43.690" endtime="20181124 17:43:43.691"></status>
+</kw>
+<kw name="Normalize Path" library="OperatingSystem">
+<doc>Normalizes the given path.</doc>
+<arguments>
+<arg>D:\\Dokumenty\\Programovani\\Projekty\\Eclipse\\hackathon_team_2\\Keywords/../TestOutput/</arg>
+</arguments>
+<assign>
+<var>${TestOutput}</var>
+</assign>
+<msg timestamp="20181124 17:43:43.692" level="INFO">${TestOutput} = D:\Dokumenty\Programovani\Projekty\Eclipse\hackathon_team_2\TestOutput</msg>
+<status status="PASS" starttime="20181124 17:43:43.691" endtime="20181124 17:43:43.692"></status>
+</kw>
+<kw name="Normalize Path" library="OperatingSystem">
+<doc>Normalizes the given path.</doc>
+<arguments>
+<arg>D:\\Dokumenty\\Programovani\\Projekty\\Eclipse\\hackathon_team_2\\Keywords/../Resources/TestData/screenshot.png</arg>
+</arguments>
+<assign>
+<var>${TestData}</var>
+</assign>
+<msg timestamp="20181124 17:43:43.693" level="INFO">${TestData} = D:\Dokumenty\Programovani\Projekty\Eclipse\hackathon_team_2\Resources\TestData\screenshot.png</msg>
+<status status="PASS" starttime="20181124 17:43:43.693" endtime="20181124 17:43:43.693"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>${TestData}</arg>
+</arguments>
+<msg timestamp="20181124 17:43:44.382" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Resources/TestData/screenshot.png"&gt;&lt;img src="Resources/TestData/screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20181124 17:43:43.694" endtime="20181124 17:43:44.382"></status>
+</kw>
+<kw name="Find Image" library="library">
+<doc>Keyword accepts three parameters</doc>
+<arguments>
+<arg>${TestData}</arg>
+<arg>${Template}/${file_name}</arg>
+<arg>${TestOutput}/${file_name}</arg>
+</arguments>
+<msg timestamp="20181124 17:43:45.013" level="INFO">Template found</msg>
+<status status="PASS" starttime="20181124 17:43:44.382" endtime="20181124 17:43:45.015"></status>
+</kw>
+<status status="PASS" starttime="20181124 17:43:43.690" endtime="20181124 17:43:45.015"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20181124 17:43:45.016" endtime="20181124 17:43:47.184"></status>
+</kw>
+<status status="PASS" starttime="20181124 17:43:36.166" endtime="20181124 17:43:47.185" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20181124 17:43:35.884" endtime="20181124 17:43:47.186"></status>
+</suite>
+<status status="PASS" starttime="20181124 17:43:35.882" endtime="20181124 17:43:47.190"></status>
+</suite>
+<status status="PASS" starttime="20181124 17:43:35.861" endtime="20181124 17:43:47.193"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Hackathon Team 2">Hackathon Team 2</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Tests">Hackathon Team 2.Tests</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="Template Matching">Hackathon Team 2.Tests.Template Matching</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
