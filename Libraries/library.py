@@ -5,9 +5,20 @@ from robot.errors import ExecutionFailed
 
 class library(object):
     
+    """
+    Library for template matching
+    """
+    
     ROBOT_LIBRARY_VERSION = 1.0
     
     def Find_Image(self, screen_img, template_img, output_img):
+        
+        """
+        Keyword accepts three parameters
+        
+        Example:
+        | Find_Image | screenshot_path | template_path | output_path |
+        """
         
         img_rgb = cv2.imread(screen_img)
         img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
