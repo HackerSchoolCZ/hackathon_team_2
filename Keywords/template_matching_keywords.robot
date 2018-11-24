@@ -1,6 +1,10 @@
 *** Settings ***
-Library    ../Libraries/library.py    
+Library    ../Libraries/library.py
+Library    SeleniumLibrary  
+Library    OperatingSystem  
 
 *** Keywords ***
-Porovnej
-    image recognition    ../Resources/Templates/Screenshot_2.png    ../Resources/Templates/Screenshot_3.png 
+Open Browser And Go To Page
+    Open Browser    ${url}    ${browser}
+    Maximize Browser Window
+         
